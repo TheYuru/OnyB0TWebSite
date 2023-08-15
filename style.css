@@ -1,0 +1,359 @@
+html {
+	background-color:rgba(14, 14, 18, 1);
+	/*background-color:white;*/
+ }
+body{
+	margin: 0px;
+}
+header{
+	display:flex;
+	flex-direction: column;
+	justify-content: center	;
+}
+header div{	
+	padding: 2em 2% 1% 2%;
+	background: linear-gradient(0.1turn, #553FA6, #f69d3c);	
+} 
+#logoBig{
+	width:50%;
+	margin:auto;
+	margin-top:10%;
+}
+.titre{
+	margin-top:20%;
+	margin-bottom:10%;
+	display:flex;
+	justify-content: center;
+}
+h1{
+	font-size:30px;
+	font-family:  Futura;
+	color:rgba(120, 140, 160, 1);	
+}
+#navbar-container{
+	display: flow-root;
+	position:sticky;
+	top:0;
+	z-index:3;
+}
+#navbar{
+	position:relative;
+	background-color:rgba(14, 14, 18, 1);
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	display:flex;
+	justify-content: center;	
+	
+}
+#navbar ul{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style-type:none;
+}
+.NavElement{
+	margin:20%;
+}
+.NavElement a{ 
+	text-decoration: none;
+	color:rgba(120, 140, 160, 1);
+	font-size: 20px;
+	font-family:Georgia, serif;
+}
+.NavElement a:hover{
+	color:white;
+	transition: all 1s ease-out;
+}
+p{
+	color:white;
+}
+
+/*==========================================*/
+	/* Animation Machine à écire*/
+.typewriter-container {
+	display: flex;
+	justify-content: flex-start;
+	margin-left:20%;
+	margin-right:20%;
+	background-color:black;
+}
+.typewriter p {
+	font-size: 45px;
+	font-weight: lighter;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	animation: typing 3.5s steps(24);
+}
+.typewriter p::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 1px;
+	background: #dadada;
+	right: 0;
+	top: 0;
+	animation: cursor 1s infinite;
+}
+@keyframes typing {
+	from {width:0}
+	to {width: 100%;}
+}
+@keyframes cursor {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}}
+/*=====================================*/
+	/*CSS video scroll*/
+#container-video {
+	height:20000px; 
+}
+#v0{
+	display:flex;
+	justify-content: center;
+	width:90%;
+	margin:5%;
+	margin-top:5%;
+	position:sticky;
+	top:21%;
+	z-index:2;
+}
+
+/*===== Team  ======*/
+.Q-R{
+	width:100%;
+	display:grid;
+}
+.div-Q-R{
+	display: inline-block;
+	grid-template-columns: repeat(2, 1fr);
+}
+#R-Team{
+	margin-top:2%;
+}
+#R-Team p{
+	color:rgba(120, 140, 160, 1);
+	margin-left:5%;
+}
+#container-team{
+	margin-top:2%;
+	margin-left:0%;
+	display:grid;
+	gap: 1rem;
+}
+.content-head{
+	position: relative;
+	display: inline-block;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 200px;	
+	justify-self:center;
+	margin:10%;
+}
+.content-head img{
+	display:block;
+	width:110%;
+}
+@media (min-width: 800px) {
+  #container-team { grid-template-columns: repeat(3, 1fr); }
+}
+.pseudo{
+	position: absolute;
+	top:55%;
+	left: 55%;
+	transform: translate( -50%, -55% );
+	width:111%;
+	height:101%;
+	text-align:center;	
+	background-color:rgba(000,000,000,0.7);
+	border-style: dashed; 
+	border-size:10px;
+	border-color: grey;
+	visibility:hidden;
+}
+.pseudo p{
+	color:rgba(120, 140, 160, 1);	
+}
+.content-head:hover  .pseudo{
+	visibility:visible;
+}
+#R-why{
+	margin-top:2%;
+}
+#R-why p{
+	color:rgba(120, 140, 160, 1);
+	margin-left:5%;
+}
+#R-useful{
+	margin-top:2%;
+}
+#R-useful p{
+	color:rgba(120, 140, 160, 1);
+	margin-left:5%;
+}
+#R-using{
+	margin-top:2%;
+}
+#R-using p{
+	color:rgba(120, 140, 160, 1);
+	margin-left:5%;
+}
+
+.btnQG,#R-Team,#R-why,#R-useful,#R-using{
+	display: none;
+}
+.labelbtn{
+	display:flex;
+	padding:5px;
+	margin-left:7%;
+	margin-right:7%;
+	margin-top:3%;
+	border-radius:50px;
+	width:30%;
+	cursor:pointer;
+	background-color:rgba(130, 140, 160, 1);	
+}
+.labelbtn p{
+	color:rgba(14, 14, 18, 1);
+	font-family:Futura;
+	font-size:20px;
+}
+.labelbtn:hover{
+	background-color:rgba(132, 142, 162, 1);
+}
+
+#btnControl:checked ~ #R-Team,#content-team{
+	display:block;
+	display:grid;
+}
+#btnControl:checked ~ label #f-bas-1{
+	display:block;
+}
+#btnControl:checked ~ label #f-haut-1{
+	display:none;
+}
+#btnControl2:checked ~ #R-why{
+	display:block;
+}
+#btnControl2:checked ~ label #f-bas-2{
+	display:block;
+}
+#btnControl2:checked ~ label #f-haut-2{
+	display:none;
+}
+#btnControl3:checked ~ #R-useful{
+	display:block;
+}
+#btnControl3:checked ~ label #f-bas-3{
+	display:block;
+}
+#btnControl3:checked ~ label #f-haut-3{
+	display:none;
+}
+#btnControl4:checked ~ #R-using{
+	display:block;
+}
+#btnControl4:checked ~ label #f-bas-4{
+	display:block;
+}
+#btnControl4:checked ~ label #f-haut-4{
+	display:none;
+}
+#f-bas-1, #f-bas-2, #f-bas-3, #f-bas-4{
+	width:1em;
+	display:flex;
+	justify-content: space-around;
+	padding:30px;
+	display:none;
+}
+#f-haut-1, #f-haut-2, #f-haut-3, #f-haut-4{
+	width:1em;
+	display:flex;
+	justify-content: space-around;
+	padding:30px;
+	
+}
+
+
+
+/*========= Container vide ========*/
+#container-idk{
+	height:800px;
+	padding:10%;
+	margin-top:5%;
+}
+#container-idk div{
+	padding:5%;
+	border-style: dashed;
+	border-color: grey;
+	height:700px;
+}
+
+
+
+/*====== footer    =====*/
+
+footer{
+	margin:1%;
+}
+#footer-logo{
+	display:flex;
+	justify-content: center;
+}
+#div-ds{
+	margin-right:2%;
+}
+#div-fc{
+	margin-left:2%;
+}
+#discord-logo{
+	cursor: pointer;
+	width:3%;
+	position:absolute;
+}
+#discord-logo-2{
+	display:none;
+	width:3%;
+	position:absolute;
+	
+}
+#div-ds:hover #discord-logo-2{
+	display:block;
+}
+#div-ds:hover #discord-logo{
+	display:none;
+}
+#funcraft-logo{
+	cursor:pointer;
+	width:3%;
+	position:absolute;
+}
+#funcraft-logo-2{
+	display:none;
+	width:3%;
+	position:absolute;
+}
+#div-fc:hover #funcraft-logo-2{
+	display:block;
+}
+#div-fc:hover #funcraft-logo{
+	display:none;
+}
+
+	
+/*#copyright{
+	display:flex;
+	justify-content: center;
+	margin:5%;
+}
+#copyright p{
+	color:rgba(120, 140, 160, 1);
+}*/
